@@ -40,29 +40,24 @@ public class xo2 {
 		return yO;
 	}
 
-	
-
 	public static void main(String[] args) {
 
 		int[][] move = new int[3][3]; // Dvodimenzionalni niz, koordinate
 
-		
 		int polje1 = move[0][0];
 		int polje2 = move[1][0];
 		int polje3 = move[2][0];
 		int polje4 = move[0][1];
-		int polje5 = move[1][1];            // Definisem polja i koordinate polja
+		int polje5 = move[1][1]; // Definisem polja i koordinate polja
 		int polje6 = move[2][1];
 		int polje7 = move[0][2];
 		int polje8 = move[1][2];
 		int polje9 = move[2][2];
 
-		int x1; 
+		int x1;
 		int x2;
 		int o1;
 		int o2;
-		int x = 1;
-		int o = 2;
 
 		int brojac = 0;
 		while (brojac < 9) {
@@ -72,19 +67,18 @@ public class xo2 {
 
 			x1 = upisxX();
 			x2 = upisyX();
-			move[x1][x2] = x;
+			move[x1][x2] = 1;
 			brojac = brojac + 1;
 
-			if ((polje1 == polje2 && polje1 == polje3 && polje1 == x)
-					|| (polje1 == polje5 && polje1 == polje9 && polje1 == x)
-					|| (polje1 == polje4 && polje1 == polje7 && polje1 == x)
-					|| (polje2 == polje5 && polje2 == polje8 && polje2 == x)
-					|| (polje3 == polje6 && polje3 == polje9 && polje3 == x)
-					|| (polje7 == polje5 && polje7 == polje3 && polje7 == x)
-					|| (polje7 == polje8 && polje7 == polje9 && polje7 == x)) {
-				
-				System.out.println("Pobjednik igrac broj 1" );
-				
+			if ((polje1 == 1 && polje2 == 1 && polje3 == 1)
+					|| (polje1 == 1 && polje5 == 1 && polje9 == 1)
+					|| (polje1 == 1 && polje4 == 1 && polje7 == 1)
+					|| (polje2 == 1 && polje5 == 1 && polje8 == 1)
+					|| (polje3 == 1 && polje6 == 1 && polje9 == 1)
+					|| (polje7 == 1 && polje5 == 1 && polje3 == 1)
+					|| (polje7 == 1 && polje8 == 1 && polje9 == 1)) {
+
+				System.out.println("Pobjednik igrac broj 1");
 
 			}
 
@@ -93,19 +87,19 @@ public class xo2 {
 
 			o1 = upisxO();
 			o2 = upisyO();
-			move[o1][o2] = o;
+			move[o1][o2] = 2;
 			brojac = brojac + 1;
 
-			if ((polje1 == polje2 && polje1 == polje3 && polje1 == o)
-					|| (polje1 == polje5 && polje1 == polje9 && polje1 == o)
-					|| (polje1 == polje4 && polje1 == polje7 && polje1 == o)
-					|| (polje2 == polje5 && polje2 == polje8 && polje2 == o)
-					|| (polje3 == polje6 && polje3 == polje9 && polje3 == o)
-					|| (polje7 == polje5 && polje7 == polje3 && polje7 == o)
-					|| (polje7 == polje8 && polje7 == polje9 && polje7 == o)) {
-				
-				System.out.println("Pobjednik igrac broj 2" );
-				
+			if ((polje1 == 2 && polje2 == 2 && polje3 == 2)
+					|| (polje1 == 2 && polje5 == 2 && polje9 == 2)
+					|| (polje1 == 2 && polje4 == 2 && polje7 == 2)
+					|| (polje2 == 2 && polje5 == 2 && polje8 == 2)
+					|| (polje3 == 2 && polje6 == 2 && polje9 == 2)
+					|| (polje7 == 2 && polje5 == 2 && polje3 == 2)
+					|| (polje7 == 2 && polje8 == 2 && polje9 == 2)) {
+
+				System.out.println("Pobjednik igrac broj 2");
+
 			}
 
 		}
